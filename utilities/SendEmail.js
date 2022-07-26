@@ -1,5 +1,5 @@
 import nodemailer from "nodemailer";
-
+import { viewAdmin } from "../views/ticketAdmin";
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
   host: "smtp-mail.outlook.com",
@@ -24,11 +24,7 @@ export const sendEmailToCostumer = async (dataForm) => {
     to: "edwin16x@gmail.com", // list of receivers
     subject: "Example", // Subject line
     text: "Hello world?", // plain text body
-    html: `<h1>New Message from ${fullName}</h1>
-      <p>email : ${email}, coverage: ${coverage}</p>
-      <h3>Message:</h3>
-      <p>${message}</p>
-    `, // html body
+    html: viewAdmin(dataForm), // html body
   });
 
   console.log("Message sent: %s", info.messageId);
@@ -48,11 +44,7 @@ export const sendEmailToAdmin = async (dataForm) => {
     to: "edwin16x@gmail.com", // list of receivers
     subject: "Example", // Subject line
     text: "Hello world?", // plain text body
-    html: `<h1>New Message from ${fullName}</h1>
-      <p>email : ${email}, coverage: ${coverage}</p>
-      <h3>Message:</h3>
-      <p>${message}</p>
-    `, // html body
+    html: viewAdmin, // html body
   });
 
   console.log("Message sent: %s", info.messageId);
