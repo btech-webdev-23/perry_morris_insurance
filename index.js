@@ -3,7 +3,10 @@
  */
 import express, { request } from "express";
 import bodyParser from "body-parser";
-
+import {
+  sendEmailToAdmin,
+  sendEmailToCostumer,
+} from "./utilities/SendEmail.js";
 /**
  * App Variables
  */
@@ -24,15 +27,15 @@ app.use(bodyParser.raw());
  */
 
 app.post("/email", (req, res) => {
-  console.log(req.body.email);
-  res.send("email");
-  req.send("dsfasdf");
+  sendEmailToAdmin(req.body);
+  res.send();
 });
 
 app.get("/", (req, res) => {
   console.log(req.headers);
   res.status(200).send("Headers");
 });
+
 /**
  * Server Activation
  */
