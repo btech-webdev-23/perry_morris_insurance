@@ -34,7 +34,7 @@ export const sendEmailToCostumer = async (dataForm) => {
     <p>${message}</p>
     <h3>My last insurance company was:</h3>
     <p>${coverage}</p>
-  `, // html body
+  `, // html body view
   });
 
   console.log("Message sent: %s", info.messageId);
