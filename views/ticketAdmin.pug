@@ -1,0 +1,27 @@
+extends layout
+
+block layout-content
+    header
+        div.title
+            span Perry Morrison
+    div.banner
+        img(src="family.jpg", alt="juliane-liebermann")
+    div.one-col
+        h1 You have recieved a new message from #{name}
+        p   Here is the information that #{name} send you.
+        ul.list
+            li Name: 
+            li #{name}
+            li Email: 
+            li #{email}
+            li Coverage
+            li #{covereage}
+            li Message
+            li #{message}
+        p A email has been send to #{name}
+        hr
+        footer 
+            ul.contact 
+                li Logan UT
+                li 1234n 123w ,84321
+                li perris@gmial.com

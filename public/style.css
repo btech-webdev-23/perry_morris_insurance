@@ -23,17 +23,17 @@ header {
   width: 98%;
 }
 
-#title {
+.title {
   max-width: 120px;
   margin: 3% 0 3% 3%;
-  float: right;
+  float: left;
 }
 
 #wrapper {
   background-color: #f0f6fb;
 }
 
-#list {
+.list {
   list-style-type: none;
   text-align: center;
 }
@@ -50,13 +50,11 @@ hr {
   margin: auto;
 }
 
-::marker {
-  list-style: none;
-}
-#contact ::marker {
+.contact {
   text-align: center;
   padding-bottom: 3%;
   line-height: 16px;
   font-size: 12px;
   color: #303840;
+  list-style: none;
 }

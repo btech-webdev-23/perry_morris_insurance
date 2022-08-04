@@ -2,18 +2,22 @@ extends layout
 
 block layout-content
     header
-        div.tittle
-            p Perry Morrison
+        div.title
+            span Perry Morrison
     div.banner
         img(src="family.jpg", alt="juliane-liebermann")
     div.one-col
         h1 Thanks For Choosing Me
-        p  Hello, {name} we just receive your message. I wanted to thank you for chosse me as an option for your problem. Here is the information that you send me.
+        p  Hello, #{name} we just receive your message. I wanted to thank you for chosse me as an option for your problem. Here is the information that you send me.
         ul.list
-            li Name
-            li Email
+            li Name: 
+            li #{name}
+            li Email: 
+            li #{email}
             li Coverage
+            li #{covereage}
             li Message
+            li #{message}
         p We will be sending a relpy within 24 hours.
         hr
         footer 
