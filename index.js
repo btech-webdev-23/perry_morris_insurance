@@ -42,16 +42,27 @@ app.post("/email", (req, res) => {
   res.send();
 });
 
-// app.get("/users", (req, res) => {
-//   console.log("asdasd", req.headers);
-//   res.status(200).send("Headers");
-// });
-
+// Render Ticket
 app.get("/", (req, res) => {
-  console.log("viewPug", res.render("index", { title: "Perry Morris" }));
-  res.render("index", { title: "Home" });
+  res.render("ticketAdmin", {
+    name: "Edwin Silvestre",
+    email: "edwin16x@gmail.com",
+    coverage: "State Farm",
+    message: "I want info about this",
+  });
 });
 
+app.get("/emailToCustomer", (req, res) => {
+  console.log(
+    "viewPug",
+    res.render("ticketCustomer", {
+      name: "Edwin Silvestre",
+      email: "edwin16x@gmail.com",
+      coverage: "State Farm",
+      message: "I want info about this",
+    })
+  );
+});
 /**
  * Server Activation
  */
