@@ -1,4 +1,6 @@
 import nodemailer from "nodemailer";
+import { pugEngine } from "nodemailer-pug-engine";
+import { rootPath } from "../index.js";
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
   host: "smtp-mail.outlook.com",
@@ -10,6 +12,14 @@ let transporter = nodemailer.createTransport({
   },
 });
 
+// C:\Users\Edwin\OneDrive\Desktop\Team Dev Class\Insurance\insurance-service\utilities
+transporter.use(
+  "compile",
+  pugEngine({
+    templateDir: "./views",
+    pretty: true,
+  })
+);
 export const sendEmailToCostumer = async (dataForm) => {
   console.log(dataForm);
   const email = "edwin16x@gmail.com";
@@ -22,19 +32,10 @@ export const sendEmailToCostumer = async (dataForm) => {
     from: ` "Insurance:" <edwininsurancex@outlook.com>`, // sender address
     to: "edwin16x@gmail.com", // list of receivers
     subject: "Example", // Subject line
-    text: "Hello world?", // plain text body
-    html: `
-    <h1>You Have Received a New Message</h1>
-    <p>The message has come from ${email}</p>
-    <h3>Name of the person:</h3>
-    <!-- Indent his p -->
-    <p>Hello my name is ${fullName}</p>
-    <h3>The message send by ${fullName} is :</h3>
-    <!-- Indent this p -->
-    <p>${message}</p>
-    <h3>My last insurance company was:</h3>
-    <p>${coverage}</p>
-  `, // html body view
+    template: `ticketCustomer`, // html body view
+    ctx: {
+      name: "Perry", //ctx
+    },
   });
 
   console.log("Message sent: %s", info.messageId);
