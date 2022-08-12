@@ -22,19 +22,22 @@ transporter.use(
 );
 export const sendEmailToCostumer = async (dataForm) => {
   console.log(dataForm);
-  const email = "edwin16x@gmail.com";
-  const fullName = "Edwin Silvestre";
-  const coverage = "StateFarm";
-  const message = "I want info";
+  const email = dataForm.email;
+  const fullName = dataForm.fullName;
+  const coverage = dataForm.coverage;
+  const message = dataForm.message;
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
     from: ` "Insurance:" <edwininsurancex@outlook.com>`, // sender address
     to: "edwin16x@gmail.com", // list of receivers
-    subject: "Example", // Subject line
+    subject: "Perrys Insurance", // Subject line
     template: `ticketCustomer`, // html body view
     ctx: {
-      name: "Perry", //ctx
+      email: email,
+      fullName: fullName,
+      coverage: coverage,
+      message: message,
     },
   });
 
@@ -54,18 +57,8 @@ export const sendEmailToAdmin = async (dataForm) => {
     from: ` "Insurance:" <edwininsurancex@outlook.com>`, // sender address
     to: "edwin16x@gmail.com", // list of receivers
     subject: "New Message Received", // Subject line
-    html: `
-    <h1>You Have Received a New Message</h1>
-    <p>The message has come from ${email}</p>
-    <h3>Name of the person:</h3>
-    <!-- Indent his p -->
-    <p>Hello my name is ${fullName}</p>
-    <h3>The message send by ${fullName} is :</h3>
-    <!-- Indent this p -->
-    <p>${message}</p>
-    <h3>My last insurance company was:</h3>
-    <p>${coverage}</p>
-  `, // html body
+    template: "ticketAdmin",
+    ctx: { name: "Perry" }, // html body
   });
   console.log("Message sent: %s", info.messageId);
   console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));

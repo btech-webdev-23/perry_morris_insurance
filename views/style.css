@@ -16,6 +16,7 @@ body {
 }
 
 img {
+  content: url();
   max-width: 100%;
 }
 
@@ -27,11 +28,11 @@ header {
   max-width: 120px;
   margin: 3% 0 3% 3%;
   float: left;
-  color: red;
+  color: black;
 }
 
 #wrapper {
-  background-color: #f0f6fb;
+  background-color: azure;
 }
 
 .list {
@@ -41,12 +42,12 @@ header {
 h1,
 p {
   margin: 3%;
-  color: red;
+  color: black;
 }
 
 hr {
   height: 1px;
-  background-color: red;
+  background-color: lightblue;
   clear: both;
   width: 96%;
   margin: auto;
@@ -59,4 +60,8 @@ hr {
   font-size: 12px;
   color: #303840;
   list-style: none;
+}
+
+.formInfo {
+  color: green;
 }

@@ -9,6 +9,7 @@ import {
 } from "./utilities/SendEmail.js";
 import path from "path";
 import { fileURLToPath } from "url";
+import nodemailer from "nodemailer";
 
 /**
  * App Variables
