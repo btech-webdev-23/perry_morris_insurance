@@ -55,7 +55,7 @@ export const sendEmailToAdmin = async (dataForm) => {
   // send mail with defined transport object
   let info = await transporter.sendMail({
     from: ` "Insurance:" <edwininsurancex@outlook.com>`, // sender address
-    to: "edwin16x@gmail.com", // list of receivers
+    to: "edwininsurancex@outlook.com", // list of receivers
     subject: "New Message Received", // Subject line
     template: "ticketAdmin",
     ctx: { name: "Perry" }, // html body
