@@ -4,20 +4,20 @@ block layout-content
     header
         div.title
             span Perry Morrison
-    div.banner
-        img(src="family.jpg", alt="juliane-liebermann")
+    div
+        img(src='./family.jpg' style='width:100px; height:100px;')
     div.one-col
         h1 Thanks For Choosing Me
-        p  Hello, #{name} we just receive your message. I wanted to thank you for chosse me as an option for your problem. Here is the information that you send me.
+        p  Hello, name we just receive your message. I wanted to thank you for chosse me as an option for your problem. Here is the information that you send me.
         ul.list
             li Name: 
-            li #{name}
+            li.formInfo #{fullName}
             li Email: 
-            li #{email}
+            li.formInfo #{email}
             li Coverage
-            li #{covereage}
+            li.formInfo #{coverage}
             li Message
-            li #{message}
+            li.formInfo #{message}
         p We will be sending a relpy within 24 hours.
         hr
         footer 
