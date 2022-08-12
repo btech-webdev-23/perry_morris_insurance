@@ -33,8 +33,9 @@ app.use(bodyParser.raw());
  * Routes Definitions
  */
 
-app.post("/email", (req, res) => {
-  sendEmailToCostumer(req.body);
+app.post("/email", async (req, res) => {
+  await sendEmailToCostumer(req.body);
+  await sendEmailToAdmin(req.body);
 
   res.send();
 });
