@@ -9,8 +9,6 @@ import {
 } from "./utilities/SendEmail.js";
 import path from "path";
 import { fileURLToPath } from "url";
-import nodemailer from "nodemailer";
-
 /**
  * App Variables
  */
@@ -40,6 +38,9 @@ app.post("/email", async (req, res) => {
   res.send();
 });
 
+app.get("/", (req, res) => {
+  res.send();
+});
 /**
  * Server Activation
  */
