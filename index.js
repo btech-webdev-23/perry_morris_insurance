@@ -9,8 +9,6 @@ import {
 } from "./utilities/SendEmail.js";
 import path from "path";
 import { fileURLToPath } from "url";
-import nodemailer from "nodemailer";
-
 /**
  * App Variables
  */
@@ -33,12 +31,16 @@ app.use(bodyParser.raw());
  * Routes Definitions
  */
 
-app.post("/email", (req, res) => {
-  sendEmailToCostumer(req.body);
+app.post("/email", async (req, res) => {
+  await sendEmailToCostumer(req.body);
+  await sendEmailToAdmin(req.body);
 
   res.send();
 });
 
+app.get("/", (req, res) => {
+  res.send();
+});
 /**
  * Server Activation
  */
