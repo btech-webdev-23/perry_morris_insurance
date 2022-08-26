@@ -4,10 +4,12 @@ import * as dotenv from "dotenv";
 dotenv.config();
 const emailUser = process.env.EMAIL_USER;
 const emailPassword = process.env.EMAIL_PASSWORD;
+const port = process.env.EMAIL_PORT;
+const host = process.env.EMIAL_HOST;
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
-  host: "smtp-mail.outlook.com",
-  port: 587,
+  host: host,
+  port: port,
   secure: false, // true for 465, false for other ports
   auth: {
     user: emailUser, // generated ethereal user

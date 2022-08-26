@@ -3,12 +3,14 @@
  */
 import express from "express";
 import bodyParser from "body-parser";
+import { body, check, validationResult } from "express-validator";
+import path from "path";
+import { fileURLToPath } from "url";
 import {
   sendEmailToAdmin,
   sendEmailToCostumer,
 } from "./utilities/SendEmail.js";
-import path from "path";
-import { fileURLToPath } from "url";
+
 /**
  * App Variables
  */
@@ -22,7 +24,6 @@ export const rootPath = path.dirname(__filename);
 /**
  *  App Configuration
  */
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.raw());
@@ -31,16 +32,33 @@ app.use(bodyParser.raw());
  * Routes Definitions
  */
 
-app.post("/email", async (req, res) => {
-  await sendEmailToCostumer(req.body);
-  await sendEmailToAdmin(req.body);
+app.post(
+  "/email",
+  [
+    check("fullName", "This must be 4+ characters long")
+      .exists({ checkFalsy: true })
+      .isLength({ min: 4 }),
+    check("email", "Email is not valid").isEmail().normalizeEmail(),
+    check("coverage", "This must be 4+ characters long")
+      .exists({ checkFalsy: true })
+      .isLength({ min: 4 }),
+    check("message", "This must be 4+ characters long")
+      .exists({ checkFalsy: true })
+      .isLength({ min: 4 }),
+  ],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(422).jsonp(errors.array());
+    } else {
+      // await sendEmailToCostumer(req.body);
+      // await sendEmailToAdmin(req.body);
+      res.redirect("http://127.0.0.1:5501/index.html");
+      console.log(req.body);
+    }
+  }
+);
 
-  res.send();
-});
-
-app.get("/", (req, res) => {
-  res.send();
-});
 /**
  * Server Activation
  */
