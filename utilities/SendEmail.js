@@ -5,10 +5,10 @@ dotenv.config();
 const emailUser = process.env.EMAIL_USER;
 const emailPassword = process.env.EMAIL_PASSWORD;
 const port = process.env.EMAIL_PORT;
-const host = process.env.EMIAL_HOST;
+const host = process.env.EMAIL_HOST;
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
-  host: host,
+  host: "host",
   port: port,
   secure: false, // true for 465, false for other ports
   auth: {
@@ -17,7 +17,6 @@ let transporter = nodemailer.createTransport({
   },
 });
 
-// C:\Users\Edwin\OneDrive\Desktop\Team Dev Class\Insurance\insurance-service\utilities
 transporter.use(
   "compile",
   pugEngine({
@@ -25,6 +24,7 @@ transporter.use(
     pretty: true,
   })
 );
+
 export const sendEmailToCostumer = async (dataForm) => {
   console.log(dataForm);
   const email = dataForm.email;
@@ -32,21 +32,30 @@ export const sendEmailToCostumer = async (dataForm) => {
   const coverage = dataForm.coverage;
   const message = dataForm.message;
 
-  // send mail with defined transport object
-  let info = await transporter.sendMail({
-    from: ` "Perrys Insurance:" <${emailUser}>`, // sender address
-    to: `<${email}>`, // list of receivers
-    subject: "We have received your information", // Subject line
-    template: `ticketCustomer`, // html body view
-    ctx: {
-      email: email,
-      fullName: fullName,
-      coverage: coverage,
-      message: message,
-    },
+  //verify connection configurations
+  transporter.verify(function (error, success) {
+    if (error) {
+      console.log("SMTP erorr " + error);
+    } else {
+      console.log("The SMTP coneection is working");
+
+      // send mail with defined transport object
+      let info = transporter.sendMail({
+        from: ` "Perrys Insurance:" <${emailUser}>`, // sender address
+        to: `<${email}>`, // list of receivers
+        subject: "We have received your information", // Subject line
+        template: `ticketCustomer`, // html body view
+        ctx: {
+          email: email,
+          fullName: fullName,
+          coverage: coverage,
+          message: message,
+        },
+      });
+      console.log("Message sent: %s", info.response);
+      console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+    }
   });
-  console.log("Message sent: %s", info.response);
-  console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 };
 
 export const sendEmailToAdmin = async (dataForm) => {
@@ -56,19 +65,26 @@ export const sendEmailToAdmin = async (dataForm) => {
   const coverage = dataForm.coverage;
   const message = dataForm.message;
 
-  // send mail with defined transport object
-  let info = await transporter.sendMail({
-    from: ` "Insurance:" <${emailUser}>`, // sender address
-    to: `<${emailUser}>`, // list of receivers
-    subject: "New Message Received", // Subject line
-    template: "ticketAdmin",
-    ctx: {
-      email: email,
-      fullName: fullName,
-      coverage: coverage,
-      message: message,
-    }, // html body
+  //verify connection configurations
+  transporter.verify(function (error, success) {
+    if (error) {
+      console.log("Error found " + error);
+    } else {
+      console.log("Succes");
+      // send mail with defined transport object
+      let info = transporter.sendMail({
+        from: ` "Insurance:" <${emailUser}>`, // sender address
+        to: `<${emailUser}>`, // list of receivers
+        subject: "New Message Received", // Subject line
+        template: "ticketAdmin",
+        ctx: {
+          email: email,
+          coverage: coverage,
+          message: message,
+        },
+      });
+      console.log("Message sent: %s", info.messageId);
+      console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+    }
   });
-  console.log("Message sent: %s", info.messageId);
-  console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 };

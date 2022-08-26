@@ -51,10 +51,9 @@ app.post(
     if (!errors.isEmpty()) {
       return res.status(422).jsonp(errors.array());
     } else {
-      // await sendEmailToCostumer(req.body);
-      // await sendEmailToAdmin(req.body);
+      await sendEmailToCostumer(req.body);
+      await sendEmailToAdmin(req.body);
       res.redirect("http://127.0.0.1:5501/index.html");
-      console.log(req.body);
     }
   }
 );
