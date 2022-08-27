@@ -38,6 +38,7 @@ export const sendEmailToCostumer = async (dataForm) => {
     subject: "We have received your information", // Subject line
     template: `ticketCustomer`, // html body view
     ctx: {
+      name: fullName,
       email: email,
       fullName: fullName,
       coverage: coverage,
@@ -72,6 +73,7 @@ export const sendEmailToAdmin = async (dataForm) => {
     subject: "New Message Received", // Subject line
     template: "ticketAdmin",
     ctx: {
+      name: fullName,
       email: email,
       coverage: coverage,
       message: message,
