@@ -163,13 +163,13 @@
           <label for="contact">Email</label>
           <input
             type="email"
-            name=""
+            name="email"
             placeholder="Email"
             required
             minlength="4"
           />
           <label for="contact">Who is your current provider?</label>
-          <input list="provider" name="provider" />
+          <input list="provider" name="coverage" />
           <datalist id="provider">
             <option value="StateFarm"></option>
             <option value="GEICO"></option>
@@ -179,7 +179,12 @@
           </datalist>
 
           <label for="contact">How can we get started helping you?</label>
-          <textarea placeholder="Message" required minlength="4"></textarea>
+          <textarea
+            placeholder="Message"
+            name="message"
+            required
+            minlength="4"
+          ></textarea>
           <input type="submit" value="Submit" />
         </div>
       </form>
