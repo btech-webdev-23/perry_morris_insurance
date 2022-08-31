@@ -50,14 +50,7 @@ export const sendEmailToCustomer = async (dataForm) => {
     if (error) {
       console.log("Error Found:" + error);
     } else {
-      transporter.sendMail(info, (err, result) => {
-        if (err) {
-          console.log(err);
-          return false;
-        } else {
-          console.log(result);
-        }
-      });
+      transporter.sendMail(info, callbackError);
     }
   });
 };
@@ -83,14 +76,16 @@ export const sendEmailToAdmin = async (dataForm) => {
     if (error) {
       console.log("Error found: " + error);
     } else {
-      transporter.sendMail(info, (err, result) => {
-        if (err) {
-          console.log("Error Found: " + err);
-          return false;
-        } else {
-          console.log("Email sent" + result);
-        }
-      });
+      transporter.sendMail(info, callbackError);
     }
   });
 };
+
+function callbackError(err, result) {
+  if (err) {
+    console.log("Error Found: " + err);
+    return false;
+  } else {
+    console.log("Email sent" + result);
+  }
+}
