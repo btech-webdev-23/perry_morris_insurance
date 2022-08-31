@@ -27,8 +27,7 @@ transporter.use(
   })
 );
 
-export const sendEmailToCostumer = async (dataForm) => {
-  console.log(dataForm);
+export const sendEmailToCustomer = async (dataForm) => {
   const email = dataForm.email;
   const fullName = dataForm.fullName;
   const coverage = dataForm.coverage;
@@ -38,7 +37,7 @@ export const sendEmailToCostumer = async (dataForm) => {
     from: ` "Perrys Insurance:" <${emailUser}>`, // sender address
     to: `<${email}>`, // list of receivers
     subject: "We have received your information", // Subject line
-    template: `ticketCustomer`, // html body view
+    template: `ticketcustomer`, // html body view
     ctx: {
       name: fullName,
       email: email,
@@ -64,7 +63,6 @@ export const sendEmailToCostumer = async (dataForm) => {
 };
 
 export const sendEmailToAdmin = async (dataForm) => {
-  console.log(dataForm);
   const email = dataForm.email;
   const fullName = dataForm.fullName;
   const coverage = dataForm.coverage;

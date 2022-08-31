@@ -8,7 +8,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import {
   sendEmailToAdmin,
-  sendEmailToCostumer,
+  sendEmailToCustomer,
 } from "./utilities/SendEmail.js";
 
 /**
@@ -51,7 +51,7 @@ app.post(
     if (!errors.isEmpty()) {
       return res.status(422).jsonp(errors.array());
     } else {
-      await sendEmailToCostumer(req.body);
+      await sendEmailToCustomer(req.body);
       await sendEmailToAdmin(req.body);
       res.redirect("http://127.0.0.1:5501/index.html");
     }
