@@ -1,3 +1,4 @@
+// Imports
 import nodemailer from "nodemailer";
 import { pugEngine } from "nodemailer-pug-engine";
 import * as dotenv from "dotenv";
@@ -17,6 +18,7 @@ let transporter = nodemailer.createTransport({
   },
 });
 
+// Add pug as a template
 transporter.use(
   "compile",
   pugEngine({
