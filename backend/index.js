@@ -35,11 +35,11 @@ app.use(bodyParser.raw());
 app.post(
   "/email",
   [
-    check("fullName", "This must be 4+ characters long")
+    check("name", "This must be 4+ characters long")
       .exists({ checkFalsy: true })
       .isLength({ min: 4 }),
     check("email", "Email is not valid").isEmail().normalizeEmail(),
-    check("coverage", "This must be 4+ characters long")
+    check("provider", "This must be 4+ characters long")
       .exists({ checkFalsy: true })
       .isLength({ min: 4 }),
     check("message", "This must be 4+ characters long")
@@ -53,7 +53,7 @@ app.post(
     } else {
       await sendEmailToCustomer(req.body);
       await sendEmailToAdmin(req.body);
-      res.redirect("http://127.0.0.1:5501/index.html");
+      res.redirect("http://127.0.0.1:5500/frontend/index.html");
     }
   }
 );

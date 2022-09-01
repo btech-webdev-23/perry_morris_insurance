@@ -25,7 +25,7 @@ header {
 .title {
   max-width: 120px;
   margin: 3% 0 3% 3%;
-  float: left;
+  text-align: center;
   color: black;
 }
 
@@ -61,5 +61,5 @@ hr {
 }
 
 .formInfo {
-  color: green;
+  color: goldenrod;
 }

@@ -3,8 +3,8 @@ import nodemailer from "nodemailer";
 import { pugEngine } from "nodemailer-pug-engine";
 import * as dotenv from "dotenv";
 dotenv.config();
-const emailUser = process.env.EMAIL_USER;
-const emailPassword = process.env.EMAIL_PASSWORD;
+const emailUser = process.env.EMAIL_INSURANCE;
+const emailPassword = process.env.EMAIL_INSURANCE_PASSWORD;
 const port = process.env.EMAIL_PORT;
 const host = process.env.EMAIL_HOST;
 // create reusable transporter object using the default SMTP transport
@@ -28,21 +28,20 @@ transporter.use(
 );
 
 export const sendEmailToCustomer = async (dataForm) => {
+  const name = dataForm.name;
   const email = dataForm.email;
-  const fullName = dataForm.fullName;
-  const coverage = dataForm.coverage;
+  const provider = dataForm.provider;
   const message = dataForm.message;
 
   let info = {
-    from: ` "Perrys Insurance:" <${emailUser}>`, // sender address
+    from: ` "Perry Insurance:" <${emailUser}>`, // sender address
     to: `<${email}>`, // list of receivers
     subject: "We have received your information", // Subject line
     template: `ticketcustomer`, // html body view
     ctx: {
-      name: fullName,
+      name: name,
       email: email,
-      fullName: fullName,
-      coverage: coverage,
+      provider: provider,
       message: message,
     },
   };
@@ -56,9 +55,9 @@ export const sendEmailToCustomer = async (dataForm) => {
 };
 
 export const sendEmailToAdmin = async (dataForm) => {
+  const name = dataForm.name;
   const email = dataForm.email;
-  const fullName = dataForm.fullName;
-  const coverage = dataForm.coverage;
+  const provider = dataForm.provider;
   const message = dataForm.message;
   let info = {
     from: ` "Insurance:" <${emailUser}>`, // sender address
@@ -66,9 +65,9 @@ export const sendEmailToAdmin = async (dataForm) => {
     subject: "New Message Received", // Subject line
     template: "ticketAdmin",
     ctx: {
-      name: fullName,
+      name: name,
       email: email,
-      coverage: coverage,
+      provider: provider,
       message: message,
     },
   };
@@ -86,6 +85,7 @@ function callbackError(err, result) {
     console.log("Error Found: " + err);
     return false;
   } else {
-    console.log("Email sent" + result);
+    console.log("Email Sent: ");
+    console.log(result);
   }
 }
