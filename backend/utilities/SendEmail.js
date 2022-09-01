@@ -3,10 +3,13 @@ import nodemailer from "nodemailer";
 import { pugEngine } from "nodemailer-pug-engine";
 import * as dotenv from "dotenv";
 dotenv.config();
+
+//.env var
 const emailUser = process.env.EMAIL_INSURANCE;
 const emailPassword = process.env.EMAIL_INSURANCE_PASSWORD;
 const port = process.env.EMAIL_PORT;
 const host = process.env.EMAIL_HOST;
+
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
   host: host,
@@ -80,6 +83,7 @@ export const sendEmailToAdmin = async (dataForm) => {
   });
 };
 
+// Handle error
 function callbackError(err, result) {
   if (err) {
     console.log("Error Found: " + err);

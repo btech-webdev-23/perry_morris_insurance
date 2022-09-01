@@ -3,9 +3,7 @@
  */
 import express from "express";
 import bodyParser from "body-parser";
-import { body, check, validationResult } from "express-validator";
-import path from "path";
-import { fileURLToPath } from "url";
+import { check, validationResult } from "express-validator";
 import {
   sendEmailToAdmin,
   sendEmailToCustomer,
@@ -17,9 +15,6 @@ import {
 
 const app = express();
 const port = process.env.PORT || "8000";
-
-const __filename = fileURLToPath(import.meta.url);
-export const rootPath = path.dirname(__filename);
 
 /**
  *  App Configuration
