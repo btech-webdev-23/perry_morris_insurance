@@ -6,11 +6,25 @@
 	font-family: "Poppins", sans-serif;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Ubuntu", sans-serif;
+}
+
 html {
 	scroll-behavior: smooth;
 	height: 12rem;
 }
-
+.heroTitle {
+	font-family: "Ubuntu", sans-serif;
+	color: #f6f8fa; /* Text Color*/
+	font-size: 1.7rem;
+	position: fixed;
+	display: contents;
+}
 /* Navbar Section */
 .nav {
 	position: fixed;
@@ -25,10 +39,11 @@ html {
 }
 .footNav {
 	position: absolute;
+	min-height: fit-content;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
 	width: 100%;
 	padding: 1rem 6.5rem;
 	background: #73c2be;
@@ -93,11 +108,11 @@ html {
 	height: 100%;
 	opacity: 0.85;
 }
-/* First Section */
+/* First Section light house and text */
 .mid {
 	position: absolute;
-	top: 50%;
-	left: 50%;
+	top: 40%;
+	left: 60%;
 	transform: translate(-50%, -50%);
 	text-align: center;
 }
@@ -251,8 +266,14 @@ h5 {
 	width: 57%;
 }
 /* Card For About */
+.team1 {
+	display: flex;
+	flex-flow: row wrap;
+	box-sizing: content-box;
+	padding: 10px;
+}
 .agent .people .team1 {
-	width: 45%;
+	max-width: 25%;
 	height: auto;
 	box-sizing: border-box;
 	background: #73c2be; /* Background Card*/
@@ -294,8 +315,8 @@ h5 {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items: center;
-	padding: 0 20px 5px 20px;
+	align-items: stretch;
+	padding: 10px 20px 5px 20px;
 }
 .agent .people .team1 .teamDetails .pro p {
 	color: #776885;
@@ -472,11 +493,31 @@ textarea:focus {
 	.nav {
 		padding: 1rem 4.5rem;
 	}
-
+	.footNav {
+		position: absolute;
+		min-height: fit-content;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		width: 100%;
+		padding: 1rem 6.5rem;
+		background: #73c2be;
+		z-index: 100000;
+	}
 	.nav h2 {
 		font-size: 1.4rem;
 	}
-
+	.mid {
+		position: absolute;
+		top: 40%;
+		left: 80%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
+	.team1 {
+		max-width: fit-content;
+	}
 	#item li {
 		padding-right: 30px;
 	}
@@ -496,6 +537,18 @@ textarea:focus {
 	}
 	.nav h2 {
 		font-size: 1.6rem;
+	}
+	.footNav {
+		position: absolute;
+		min-height: fit-content;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		width: 100%;
+		padding: 1rem 6.5rem;
+		background: #73c2be;
+		z-index: 100000;
 	}
 	#item {
 		display: flex;
@@ -533,11 +586,20 @@ textarea:focus {
 	#item .icons i {
 		padding: 0 15px 0 15px;
 	}
+	.team1 {
+		max-width: fit-content;
+	}
 
 	#bar {
 		display: initial;
 	}
-
+	.mid {
+		position: absolute;
+		top: 40%;
+		left: 80%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
 	.mid p {
 		font-size: 1.1rem;
 		margin-bottom: 1.2rem;
@@ -701,6 +763,9 @@ textarea:focus {
 	.box .boxMenu .team1 .teamDetails .pro p {
 		font-size: 1rem;
 	}
+	.team1 {
+		flex: auto;
+	}
 	.contact {
 		padding: 6rem;
 	}
@@ -753,7 +818,13 @@ textarea:focus {
 	.back {
 		background-position: center;
 	}
-
+	.mid {
+		position: absolute;
+		top: 40%;
+		left: 60%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
 	.mid p {
 		font-size: 1rem;
 		margin-bottom: 1rem;
@@ -797,6 +868,9 @@ textarea:focus {
 		width: 70%;
 		margin-top: 1.7rem;
 		padding-top: 1.7rem;
+	}
+	.team1 {
+		min-width: 90%;
 	}
 
 	.agent {
