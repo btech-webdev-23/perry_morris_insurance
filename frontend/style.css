@@ -21,7 +21,7 @@ html {
 .heroTitle {
 	font-family: "Ubuntu", sans-serif;
 	color: #f6f8fa; /* Text Color*/
-	font-size: 1.7rem;
+	font-size: 1.9rem;
 	position: fixed;
 	display: contents;
 }
@@ -38,20 +38,23 @@ html {
 	z-index: 100000;
 }
 .footNav {
-	position: absolute;
-	min-height: fit-content;
-	display: flex;
+	position: inherit;
+	min-height: auto;
+	display: contents;
 	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
+	justify-content: flex-start;
+	align-items: baseline;
 	width: 100%;
-	padding: 1rem 6.5rem;
-	background: #73c2be;
-	z-index: 100000;
+	padding: 2%;
+	margin: 5px;
+	background: #f6f8fa;
+	font-family: "Ubuntu", sans-serif;
+	color: #04030f;
 }
 .nav h2 {
 	color: #f6f8fa; /* Text Color*/
 	font-size: 1.7rem;
+	font-family: "Ubuntu", sans-serif;
 }
 /* Sections */
 #item {
@@ -69,14 +72,15 @@ html {
 	text-decoration: none;
 	color: #fff; /* Nav text Colors*/
 	text-transform: uppercase;
-	font-size: 1rem;
+	font-size: 1.2rem;
 }
 
 #item li a:hover,
 #item li a.active,
 #item i:hover {
-	color: #04030f; /* Nav Hover Text Color */
+	color: #5f1a37; /* Nav Hover Text Color */
 	cursor: pointer;
+	text-shadow: #73c2be;
 }
 
 #item i {
@@ -103,10 +107,10 @@ html {
 	z-index: -1;
 }
 .back .overlay {
-	/*background: #7f8c8d;  Color Of Background IMG*/
+	background: #fff; /* Color Of Background IMG */
 	width: 100%;
 	height: 100%;
-	opacity: 0.85;
+	opacity: 0.1;
 }
 /* First Section light house and text */
 .mid {
@@ -146,17 +150,17 @@ html {
 }
 
 .mid .btn a.border {
-	color: #3f8b7e; /* BTN*/
+	color: #04030f; /* BTN*/
 	text-transform: uppercase;
-	border: 2px solid #3f8b7e; /* BTN */
-	border-radius: 3px;
+	border: 2px solid #73c2be; /* BTN */
+	border-radius: 15px;
 	padding: 0.9rem 1.6rem;
 }
 
 .mid .btn a.border:hover {
-	color: #3f8b7e; /* BTN*/
-	border: 1px solid #04030f;
-	background: #73c2be;
+	color: #fff; /* BTN*/
+	border: 2px solid #04030f;
+	background: #5f1a37;
 }
 /* Second Section */
 .details {
@@ -166,7 +170,7 @@ html {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	padding: 8rem 15rem;
+	padding: 6rem 6rem;
 }
 
 .details h3,
@@ -270,6 +274,7 @@ h5 {
 	display: flex;
 	flex-flow: row wrap;
 	box-sizing: content-box;
+	margin: 3px;
 	padding: 10px;
 }
 .agent .people .team1 {
@@ -493,18 +498,7 @@ textarea:focus {
 	.nav {
 		padding: 1rem 4.5rem;
 	}
-	.footNav {
-		position: absolute;
-		min-height: fit-content;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
-		width: 100%;
-		padding: 1rem 6.5rem;
-		background: #73c2be;
-		z-index: 100000;
-	}
+
 	.nav h2 {
 		font-size: 1.4rem;
 	}
@@ -537,18 +531,6 @@ textarea:focus {
 	}
 	.nav h2 {
 		font-size: 1.6rem;
-	}
-	.footNav {
-		position: absolute;
-		min-height: fit-content;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
-		width: 100%;
-		padding: 1rem 6.5rem;
-		background: #73c2be;
-		z-index: 100000;
 	}
 	#item {
 		display: flex;
