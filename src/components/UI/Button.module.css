@@ -1,0 +1,17 @@
+.btn {
+  margin-top: 2rem;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #04030f; /* BTN*/
+  text-transform: uppercase;
+  border: 2px solid #73c2be; /* BTN */
+  border-radius: 15px;
+  padding: 0.9rem 1.6rem;
+}
+
+.btn:hover {
+  color: #fff; /* BTN*/
+  border: 2px solid #04030f;
+  background: #5f1a37;
+  cursor: pointer;
+}

@@ -1,0 +1,64 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-top: 1px solid #28363a; /* Border Line*/
+  background-color: #73c2be;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+p {
+  color: #3ea1a8; /* Text */
+}
+
+.email {
+  grid-area: email;
+}
+
+.phone {
+  grid-area: phone;
+}
+
+.i-email {
+  grid-area: i-email;
+}
+
+.i-phone {
+  grid-area: i-phone;
+}
+
+.contact {
+  display: grid;
+  grid-template-areas:
+    "i-email email"
+    "i-phone phone";
+  gap: 8px;
+  padding: 5px 20px;
+}
+
+@media screen and (max-width: 991px) {
+  .footer {
+    padding: 6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 5rem 2rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 496px) {
+  .footer {
+    padding: 5rem 2rem;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}

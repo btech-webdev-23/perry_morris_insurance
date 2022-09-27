@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment, useState } from "react";
+
+import Modal from "./components/UI/Modal";
+import Header from "./components/Navigation/Header";
+import IntroSection from "./components/Home/IntroSection";
+import CoverageSection from "./components/Home/CoverageSection";
+import InfoSection from "./components/Home/InfoSection";
+import ContactSection from "./components/Home/ContactSection";
+import Footer from "./components/Navigation/Footer";
 
 function App() {
+  const [modalIsShown, setModalIsShown] = useState(false);
+
+  const showModalHandler = () => {
+    setModalIsShown(true);
+  };
+
+  const hideModalHandler = () => {
+    setModalIsShown(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      {modalIsShown && <Modal onCloseModal={hideModalHandler} />}
+      <Header />
+      <IntroSection />
+      <CoverageSection onShowModal={showModalHandler} />
+      <InfoSection />
+      <ContactSection />
+      <Footer />
+    </Fragment>
   );
 }
 

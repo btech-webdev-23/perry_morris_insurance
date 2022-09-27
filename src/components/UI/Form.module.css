@@ -1,0 +1,48 @@
+.submit {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #1b1a1b; /* Border Box */
+  outline: none;
+  margin: 13px 0;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid #73c2be; /* Border Box Clicked/Focus*/
+  background-color: rgba(115, 194, 190, 0.2); /* Border color just faded out */
+}
+
+input::placeholder {
+  color: #0d3538; /* Place Holder */
+  font-size: 1.1rem;
+}
+
+textarea {
+  color: #1520b8; /* Text Area Color*/
+  font-size: 1.1rem;
+  height: 80%;
+}
+
+@media screen and (max-width: 991px) {
+  input,
+  textarea {
+    padding: 12px;
+    margin: 10px 0;
+  }
+
+  input::placeholder {
+    font-size: 1rem;
+  }
+
+  textarea {
+    font-size: 1rem;
+  }
+}
