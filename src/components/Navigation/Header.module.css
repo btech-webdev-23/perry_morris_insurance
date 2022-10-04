@@ -6,6 +6,10 @@
   display: contents;
 }
 
+.logo {
+  width: 450px;
+}
+
 .navbar {
   position: fixed;
   display: flex;
