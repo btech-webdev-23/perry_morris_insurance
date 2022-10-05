@@ -2,16 +2,30 @@ import { Fragment, useState } from "react";
 
 import Modal from "./components/UI/Modal";
 import Header from "./components/Navigation/Header";
-import IntroSection from "./components/Home/IntroSection";
-import CoverageSection from "./components/Home/CoverageSection";
-import InfoSection from "./components/Home/InfoSection";
-import ContactSection from "./components/Home/ContactSection";
+import Home from "./components/Home/Home";
 import Footer from "./components/Navigation/Footer";
 
 function App() {
   const [modalIsShown, setModalIsShown] = useState(false);
+  const [modalTitle, setModalTitle] = useState("");
+  const [modalDescription, setModalDescription] = useState("");
 
-  const showModalHandler = () => {
+  const showModalHandler = (event) => {
+    const eventCurrentTarget = event.currentTarget.classList;
+
+    if (eventCurrentTarget.contains("card_ind")) {
+      setModalTitle("Individuals");
+      setModalDescription("Some sample text for individual coverage.");
+    } else if (eventCurrentTarget.contains("card_fam")) {
+      setModalTitle("Families");
+      setModalDescription("Some sample text for family coverage.");
+    } else if (eventCurrentTarget.contains("card_smb")) {
+      setModalTitle("Small Businesses");
+      setModalDescription("Some sample text for small business coverage.");
+    } else {
+      setModalTitle("Retired");
+      setModalDescription("Some sample text for retired coverage.");
+    }
     setModalIsShown(true);
   };
 
@@ -21,12 +35,17 @@ function App() {
 
   return (
     <Fragment>
-      {modalIsShown && <Modal onCloseModal={hideModalHandler} />}
+      {modalIsShown && (
+        <Modal
+          onCloseModal={hideModalHandler}
+          title={modalTitle}
+          description={modalDescription}
+        />
+      )}
       <Header />
-      <IntroSection />
-      <CoverageSection onShowModal={showModalHandler} />
-      <InfoSection />
-      <ContactSection />
+      <main>
+        <Home onShowModal={showModalHandler} />
+      </main>
       <Footer />
     </Fragment>
   );
