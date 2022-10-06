@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   border-top: 1px solid #28363a; /* Border Line*/
-  background-color: #73c2be;
+  background-image: linear-gradient(to right, #bf9bf2, #cfa0fc);
 }
 
 .info {
@@ -13,20 +13,20 @@
 }
 
 p {
-  color: #3ea1a8; /* Text */
+  color: #5f1a37; /* Text */
 }
 
 .phone,
 .email {
   text-decoration: none;
-  color: #fff;
+  color: #5f1a37;
 }
 
 .email:hover,
 .email:active,
 .phone:hover,
 .phone:active {
-  color: #5f1a37;
+  color: #fff;
 }
 
 .contact {

@@ -14,14 +14,14 @@ const Footer = (props) => {
         <div className={classes.contact}>
           <a
             className={classes.email}
-            href="mailto:pmorris@insurewithcompass.com"
+            href="mailto:perry@perrymorrisinsurance.com"
           >
             <FontAwesomeIcon
               icon={faEnvelopeOpen}
               className="i-email"
               aria-hidden="true"
             />
-            &nbsp; pmorris@insurewithcompass.com
+            &nbsp; perry@perrymorrisinsurance.com
           </a>
           <a className={classes.phone} href="tel:+13608998760">
             <FontAwesomeIcon

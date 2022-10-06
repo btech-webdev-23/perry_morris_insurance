@@ -1,6 +1,10 @@
 .details {
   width: 100%;
-  background: #73c2be; /* BackGround */
+  background-image: linear-gradient(
+    to bottom right,
+    #bf9bf2,
+    #ecbbf2
+  ); /* BackGround */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -16,7 +20,7 @@
 
 .content h3,
 h5 {
-  color: #fff; /* Text/Headers */
+  color: #5f1a37; /* Text/Headers */
 }
 
 .content h3 {
@@ -29,7 +33,7 @@ h5 {
 
 .content p {
   font-size: 1.1rem;
-  color: #5f1a37; /* Small Text*/
+  color: #5a7cbf; /* Small Text*/
   margin: 0.5rem 0;
   padding: 0;
   text-align: start;

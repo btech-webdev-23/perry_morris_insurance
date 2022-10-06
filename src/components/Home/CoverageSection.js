@@ -8,7 +8,7 @@ const CoverageSection = (props) => {
       <p data-aos="fade-up">Get The Perfect Insurance For You</p>
       <h2 data-aos="fade-up" onClick={props.onShowModal}>
         The coverage we provide.
-      </h2>{" "}
+      </h2>
       <div className={classes.boxMenu} data-aos="fade-up">
         <Card
           className="card_ind"

@@ -25,7 +25,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #73c2be;
+  background-color: #5f1a37;
   color: #f6f8fa;
   padding: 1rem 2rem;
   border-radius: 20px 20px 0 0;
@@ -33,6 +33,7 @@
 
 h3 {
   font-size: 1.5rem;
+  color: #bf9bf2;
 }
 
 .header-icon {
@@ -46,6 +47,7 @@ h3 {
 
 p {
   padding: 1rem;
+  color: #5f1a37;
 }
 
 @keyframes fade-in {

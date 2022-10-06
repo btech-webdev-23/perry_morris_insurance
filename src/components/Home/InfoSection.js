@@ -7,7 +7,7 @@ const InfoSection = (props) => {
         <h3>Locations</h3>
         <br />
         <h5>Areas Served</h5>
-        <p>AZ,UT,ID,WA</p>
+        <p>AZ, UT, ID, WA</p>
         <h5>Located In</h5>
         <p>Logan, UT</p>
       </div>

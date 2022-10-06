@@ -18,7 +18,7 @@ const Form = (props) => {
       <input type="email" name="" placeholder="Email" />
       <label htmlFor="contact">Who is your current provider?</label>
       <input type="text" name="" placeholder="current provider" />
-      <label htmlFor="contact">How can we get started helping you?</label>
+      <label htmlFor="contact">How can we help you?</label>
       <textarea placeholder="Message"></textarea>
       <Button type="submit">Send Message</Button>
     </form>

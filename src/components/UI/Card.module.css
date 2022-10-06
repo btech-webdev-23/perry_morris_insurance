@@ -3,16 +3,17 @@
   min-height: 390px;
   max-height: 420px;
   box-sizing: border-box;
-  background: #fff; /*Card Background */
+  background-color: #5f1a37;
   box-shadow: 0 1.6px 3.6px rgba(0, 0, 0, 0.01),
     0 4.4px 10px rgba(0, 0, 0, 0.015), 0 10.6px 24.1px rgba(0, 0, 0, 0.02),
     0 35px 80px rgba(0, 0, 0, 0.03);
   cursor: pointer;
+  margin: 0 10px;
+  border-radius: 15px;
 }
 
 img {
   width: 100%;
-  object-fit: cover;
 }
 
 .content {
@@ -24,14 +25,14 @@ img {
 
 .content h4 {
   text-align: center;
-  color: #1b1c1d; /* Header*/
+  color: #bf9bf2; /* Header*/
   font-size: 1.7rem;
 }
 
 .content p {
   height: 100px;
   text-align: start;
-  color: #363738; /* Sub-Header*/
+  color: #cfa0fc; /* Sub-Header*/
   font-size: 1.1rem;
   overflow: auto;
 }

@@ -19,7 +19,7 @@
   align-items: center;
   width: 100%;
   padding: 1rem 6.5rem;
-  background: #73c2be;
+  background-image: linear-gradient(to right, #bf9bf2, #cfa0fc);
   z-index: 10;
 }
 
@@ -29,8 +29,17 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+.icons {
+  color: #5f1a37;
+}
+
+.icons:hover,
+.icons:active {
+  color: #fff;
+}
+
 .bar {
-  color: #04030f; /*Nav Three Lines When Device Width */
+  color: #5f1a37; /*Nav Three Lines When Device Width */
   font-weight: lighter;
   font-size: 1.5rem;
   position: absolute;

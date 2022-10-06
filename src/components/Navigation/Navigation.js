@@ -13,7 +13,7 @@ const Navigation = (props) => {
         <a href="#box">Insurance</a>
       </li>
       <li>
-        <a href="#contact">Contact Us</a>
+        <a href="#contact">Contact&nbsp;Us</a>
       </li>
     </ul>
   );
