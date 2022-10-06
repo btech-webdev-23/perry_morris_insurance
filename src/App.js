@@ -4,6 +4,7 @@ import Modal from "./components/UI/Modal";
 import Header from "./components/Navigation/Header";
 import Home from "./components/Home/Home";
 import Footer from "./components/Navigation/Footer";
+import "./App.module.css";
 
 function App() {
   const [modalIsShown, setModalIsShown] = useState(false);

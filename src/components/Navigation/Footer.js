@@ -12,18 +12,25 @@ const Footer = (props) => {
           Copyright ©<br />
         </p>
         <div className={classes.contact}>
-          <FontAwesomeIcon
-            icon={faEnvelopeOpen}
-            className="i-email"
-            aria-hidden="true"
-          />
-          <span className="email">pmorris@insurewithcompass.com</span>
-          <FontAwesomeIcon
-            icon={faPhone}
-            className="i-phone"
-            aria-hidden="true"
-          />
-          <span className="phone">(360)899-8760</span>
+          <a
+            className={classes.email}
+            href="mailto:pmorris@insurewithcompass.com"
+          >
+            <FontAwesomeIcon
+              icon={faEnvelopeOpen}
+              className="i-email"
+              aria-hidden="true"
+            />
+            &nbsp; pmorris@insurewithcompass.com
+          </a>
+          <a className={classes.phone} href="tel:+13608998760">
+            <FontAwesomeIcon
+              icon={faPhone}
+              className="i-phone"
+              aria-hidden="true"
+            />
+            &nbsp; (360)899-8760
+          </a>
         </div>
       </div>
       <Navigation className={classes.footNav} />

@@ -20,12 +20,12 @@ const Header = () => {
   };
 
   return (
-    <div className={classes.navbar}>
+    <header className={classes.navbar}>
       <a className={classes.heroTitle} href="#home">
         <img className={classes.logo} src={logo} alt="Perry Morris Logo" />
       </a>
       <Navigation className={`${navDisplay ? classes["nav-show"] : ""}`} />
-      <a href="\">
+      <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
         <FontAwesomeIcon
           icon={faYoutube}
           className={classes.icons}
@@ -38,7 +38,7 @@ const Header = () => {
         aria-hidden="true"
         onClick={iconEventHandler}
       />
-    </div>
+    </header>
   );
 };
 

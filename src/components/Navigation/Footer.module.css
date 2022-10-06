@@ -16,29 +16,30 @@ p {
   color: #3ea1a8; /* Text */
 }
 
+.phone,
 .email {
-  grid-area: email;
+  text-decoration: none;
+  color: #fff;
 }
 
-.phone {
-  grid-area: phone;
-}
-
-.i-email {
-  grid-area: i-email;
-}
-
-.i-phone {
-  grid-area: i-phone;
+.email:hover,
+.email:active,
+.phone:hover,
+.phone:active {
+  color: #5f1a37;
 }
 
 .contact {
-  display: grid;
-  grid-template-areas:
-    "i-email email"
-    "i-phone phone";
-  gap: 8px;
-  padding: 5px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.email {
+  padding: 10px 0 5px 15px;
+}
+
+.phone {
+  padding: 5px 0 10px 15px;
 }
 
 @media screen and (max-width: 991px) {

@@ -5,7 +5,7 @@
   background-size: cover;
   z-index: -1;
 }
-.back .overlay {
+.overlay {
   background: #fff; /* Color Of Background IMG */
   width: 100%;
   height: 100%;
@@ -14,8 +14,8 @@
 /* First Section light house and text */
 .section-text {
   position: absolute;
-  top: 40%;
-  left: 60%;
+  top: 70%;
+  left: 65%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
@@ -34,7 +34,7 @@
 @media screen and (max-width: 1042px) {
   .section-text {
     position: absolute;
-    top: 40%;
+    top: 70%;
     left: 80%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -44,7 +44,7 @@
 @media screen and (max-width: 991px) {
   .section-text {
     position: absolute;
-    top: 40%;
+    top: 70%;
     left: 80%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -78,7 +78,7 @@
   }
   .section-text {
     position: absolute;
-    top: 40%;
+    top: 70%;
     left: 60%;
     transform: translate(-50%, -50%);
     text-align: center;
