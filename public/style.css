@@ -16,7 +16,6 @@
 
 html {
 	scroll-behavior: smooth;
-	height: 12rem;
 }
 .heroTitle {
 	font-family: "Ubuntu", sans-serif;
@@ -34,27 +33,21 @@ html {
 	align-items: center;
 	width: 100%;
 	padding: 1rem 6.5rem;
-	background: #73c2be;
+	background: #5a7cbf;
 	z-index: 100000;
 }
-.footNav {
-	position: inherit;
-	min-height: auto;
-	display: contents;
+footer {
+	background-color: #260e19;
+	color: #ecbbf2;
+	font-size: larger;
+}
+.footerNav {
+	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
-	align-items: baseline;
-	width: 100%;
-	padding: 2%;
-	margin: 5px;
-	background: #f6f8fa;
-	font-family: "Ubuntu", sans-serif;
-	color: #04030f;
 }
 .nav h2 {
 	color: #f6f8fa; /* Text Color*/
 	font-size: 1.7rem;
-	font-family: "Ubuntu", sans-serif;
 }
 /* Sections */
 #item {
@@ -142,7 +135,6 @@ html {
 	color: #04030f;
 	text-transform: uppercase;
 	padding: 0.9rem 1.6rem;
-	font-weight: 500;
 }
 
 .mid .btn a.simple:hover {
@@ -152,7 +144,7 @@ html {
 .mid .btn a.border {
 	color: #04030f; /* BTN*/
 	text-transform: uppercase;
-	border: 2px solid #73c2be; /* BTN */
+	border: 2px solid #5a7cbf; /* BTN */
 	border-radius: 15px;
 	padding: 0.9rem 1.6rem;
 }
@@ -165,7 +157,7 @@ html {
 /* Second Section */
 .details {
 	width: 100%;
-	background: #73c2be; /* BackGround */
+	background: #bf9bf2; /* BackGround */
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -244,7 +236,7 @@ h5 {
 }
 
 .agent .about {
-	width: 39%;
+	max-width: 39%;
 }
 
 .agent .about h2 {
@@ -281,7 +273,7 @@ h5 {
 	max-width: 25%;
 	height: auto;
 	box-sizing: border-box;
-	background: #73c2be; /* Background Card*/
+	background: #5a7cbf; /* Background Card*/
 	box-shadow: 0 1.6px 3.6px rgba(119, 13, 13, 0.01),
 		0 4.4px 10px rgba(0, 0, 0, 0.015), 0 10.6px 24.1px rgba(0, 0, 0, 0.02),
 		0 35px 80px rgba(0, 0, 0, 0.03);
@@ -592,6 +584,7 @@ textarea:focus {
 	}
 	.mid .btn {
 		margin-top: 1.5rem;
+		display: flex;
 	}
 	.mid .btn a {
 		font-size: 0.9rem;
