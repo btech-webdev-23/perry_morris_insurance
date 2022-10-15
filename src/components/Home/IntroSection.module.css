@@ -13,6 +13,7 @@
 } */
 section {
   position: relative;
+  background-image: linear-gradient(#4163e0, #3e87d6);
 }
 
 img {
@@ -29,20 +30,20 @@ img {
 }
 
 .section-text p {
-  color: #5f1a37; /* Text */
+  color: #fff; /* Text */
   font-size: 1.3rem;
   margin-bottom: 1.4rem;
 }
 
 .section-text h2 {
-  color: #5f1a37; /* Quote  */
+  color: #fff; /* Quote  */
   font-size: 3rem;
 }
 
 .emphasis {
   font-size: 1.2em;
   text-decoration: underline;
-  text-shadow: 2px 2px #fff;
+  text-shadow: 2px 2px #5f1a37;
 }
 
 @media screen and (max-width: 1042px) {

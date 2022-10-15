@@ -2,16 +2,16 @@
   margin-top: 2rem;
   text-decoration: none;
   font-size: 1rem;
-  color: #5a7cbf; /* BTN*/
+  color: #3e87d6; /* BTN*/
   text-transform: uppercase;
-  border: 2px solid #5a7cbf; /* BTN */
+  border: 2px solid #3e87d6; /* BTN */
   border-radius: 15px;
   padding: 0.9rem 1.6rem;
 }
 
 .btn:hover {
   color: #fff; /* BTN*/
-  border: 2px solid #5a7cbf;
+  border: 2px solid #3e87d6;
   background: #5f1a37;
   cursor: pointer;
 }

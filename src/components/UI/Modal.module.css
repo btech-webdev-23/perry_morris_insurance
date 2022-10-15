@@ -25,15 +25,15 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #5f1a37;
-  color: #f6f8fa;
+  background-color: #4163e0;
+  color: #fff;
   padding: 1rem 2rem;
   border-radius: 20px 20px 0 0;
 }
 
 h3 {
   font-size: 1.5rem;
-  color: #bf9bf2;
+  color: #fff;
 }
 
 .header-icon {

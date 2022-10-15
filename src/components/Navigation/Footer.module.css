@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   border-top: 1px solid #28363a; /* Border Line*/
-  background-image: linear-gradient(to right, #bf9bf2, #cfa0fc);
+  background-image: linear-gradient(to right, #4163e0, #3e87d6);
 }
 
 .info {
@@ -19,14 +19,14 @@ p {
 .phone,
 .email {
   text-decoration: none;
-  color: #5f1a37;
+  color: #fff;
 }
 
 .email:hover,
 .email:active,
 .phone:hover,
 .phone:active {
-  color: #fff;
+  color: #5f1a37;
 }
 
 .contact {

@@ -2,8 +2,8 @@
   width: 100%;
   background-image: linear-gradient(
     to bottom right,
-    #bf9bf2,
-    #ecbbf2
+    #4163e0,
+    #3e87d6
   ); /* BackGround */
   display: flex;
   flex-direction: row;
@@ -20,7 +20,8 @@
 
 .content h3,
 h5 {
-  color: #5f1a37; /* Text/Headers */
+  color: #fff; /* Text/Headers */
+  text-shadow: 2px 2px #5f1a37;
 }
 
 .content h3 {
@@ -33,7 +34,7 @@ h5 {
 
 .content p {
   font-size: 1.1rem;
-  color: #5a7cbf; /* Small Text*/
+  color: #fff; /* Small Text*/
   margin: 0.5rem 0;
   padding: 0;
   text-align: start;

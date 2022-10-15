@@ -1,4 +1,4 @@
-import lighthouse from "../../assets/lighthouse.jpg";
+import lighthouse from "../../assets/lighthouse.png";
 
 import Button from "../UI/Button";
 import classes from "./IntroSection.module.css";

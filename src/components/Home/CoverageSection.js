@@ -4,7 +4,7 @@ import classes from "./CoverageSection.module.css";
 
 const CoverageSection = (props) => {
   return (
-    <div className={classes.box} id="box">
+    <div className={classes.box} id="coverage">
       <p data-aos="fade-up">Get The Perfect Insurance For You</p>
       <h2 data-aos="fade-up" onClick={props.onShowModal}>
         The coverage we provide.
