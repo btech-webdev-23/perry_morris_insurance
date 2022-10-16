@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 
 import IntroSection from "./IntroSection";
-import CoverageSection from "./CoverageSection";
+import InsuranceSection from "./InsuranceSection";
 import InfoSection from "./InfoSection";
 import ContactSection from "./ContactSection";
 
@@ -9,7 +9,7 @@ const Home = (props) => {
   return (
     <Fragment>
       <IntroSection />
-      <CoverageSection onShowModal={props.onShowModal} />
+      <InsuranceSection onShowModal={props.onShowModal} />
       <InfoSection />
       <ContactSection />
     </Fragment>

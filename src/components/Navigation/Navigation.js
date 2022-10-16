@@ -10,7 +10,7 @@ const Navigation = (props) => {
         <a href="about.html">About</a>
       </li>
       <li>
-        <a href="#box">Insurance</a>
+        <a href="#insurance">Insurance</a>
       </li>
       <li>
         <a href="#contact">Contact&nbsp;Us</a>

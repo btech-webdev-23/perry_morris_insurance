@@ -12,7 +12,7 @@
 .form h2 {
   font-size: 2rem;
   color: #5f1a37; /* Heading */
-  padding-bottom: 10px;
+  padding: 30px 0 10px 0;
   width: 100%;
 }
 

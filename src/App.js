@@ -44,7 +44,7 @@ function App() {
         />
       )}
       <Header />
-      <main>
+      <main id="home">
         <Home onShowModal={showModalHandler} />
       </main>
       <Footer />

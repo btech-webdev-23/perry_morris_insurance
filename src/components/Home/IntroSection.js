@@ -3,9 +3,9 @@ import lighthouse from "../../assets/lighthouse.png";
 import Button from "../UI/Button";
 import classes from "./IntroSection.module.css";
 
-const IntroSection = (props) => {
-  const buttonRedirectHandler = () => {
-    document.location.href = "#contact";
+const IntroSection = () => {
+  const buttonRedirectHandler = (event) => {
+    document.location.href = `#${event.target.dataset.tag}`;
   };
 
   return (
@@ -17,7 +17,12 @@ const IntroSection = (props) => {
           <span className={classes.emphasis}>Insurance</span> to make you feel
           safe and secure
         </h2>
-        <Button onClick={buttonRedirectHandler}>Get In Contact</Button>
+        <Button onClick={buttonRedirectHandler} tag="insurance">
+          Insurance Policies
+        </Button>
+        <Button onClick={buttonRedirectHandler} tag="contact">
+          Get In Contact
+        </Button>
       </div>
     </section>
   );
