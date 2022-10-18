@@ -17,7 +17,10 @@ const CoverageSection = (props) => {
           onShowModal={props.onShowModal}
         >
           <h4>Individuals</h4>
-          <p>Find out about our retirement options, or our individual plans.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor
+          </p>
         </Card>
         <Card
           className="card_fam"
@@ -26,7 +29,10 @@ const CoverageSection = (props) => {
           onShowModal={props.onShowModal}
         >
           <h4>Families</h4>
-          <p>Find out about our retirement options, or our individual plans.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor
+          </p>
         </Card>
         <Card
           className="card_smb"
@@ -35,7 +41,10 @@ const CoverageSection = (props) => {
           onShowModal={props.onShowModal}
         >
           <h4>Small Businesses</h4>
-          <p>Find out about our retirement options, or our individual plans.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor
+          </p>
         </Card>
         <Card
           className="card_ret"
@@ -44,7 +53,10 @@ const CoverageSection = (props) => {
           onShowModal={props.onShowModal}
         >
           <h4>Retired</h4>
-          <p>Find out about our retirement options, or our individual plans.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor
+          </p>
         </Card>
       </div>
     </div>

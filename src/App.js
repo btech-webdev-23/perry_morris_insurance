@@ -6,6 +6,13 @@ import Home from "./components/Home/Home";
 import Footer from "./components/Navigation/Footer";
 import "./App.module.css";
 
+const modalDescriptions = [
+  "Some sample text for individual coverage.",
+  "Some sample text for family coverage.",
+  "Some sample text for small business coverage.",
+  "Some sample text for retired coverage.",
+];
+
 function App() {
   const [modalIsShown, setModalIsShown] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
@@ -16,16 +23,16 @@ function App() {
 
     if (eventCurrentTarget.contains("card_ind")) {
       setModalTitle("Individuals");
-      setModalDescription("Some sample text for individual coverage.");
+      setModalDescription(modalDescriptions[0]);
     } else if (eventCurrentTarget.contains("card_fam")) {
       setModalTitle("Families");
-      setModalDescription("Some sample text for family coverage.");
+      setModalDescription(modalDescriptions[1]);
     } else if (eventCurrentTarget.contains("card_smb")) {
       setModalTitle("Small Businesses");
-      setModalDescription("Some sample text for small business coverage.");
+      setModalDescription(modalDescriptions[2]);
     } else {
       setModalTitle("Retired");
-      setModalDescription("Some sample text for retired coverage.");
+      setModalDescription(modalDescriptions[3]);
     }
     setModalIsShown(true);
   };

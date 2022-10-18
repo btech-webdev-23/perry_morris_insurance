@@ -12,7 +12,7 @@ const IntroSection = () => {
     <section>
       <img src={lighthouse} alt="Lighthouse" />
       <div className={classes["section-text"]}>
-        <p>You are our number one priority!</p>
+        <p>Our number one priority is you!</p>
         <h2>
           <span className={classes.emphasis}>Insurance</span> to make you feel
           safe and secure
