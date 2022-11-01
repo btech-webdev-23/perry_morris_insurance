@@ -23,17 +23,17 @@ const ContactSection = () => {
   };
 
   return (
-    <div className={classes.contact} id="contact">
+    <section className={classes.contact} id="contact">
       <div className={classes.form}>
         <h2 data-aos="fade-up">
-          Send us a message! You will be contacted within one business day.
+          To get started with your package plan, we need the following:
         </h2>
         <Form
           onSubmitForm={formSubmissionHandler}
           onSubmitComplete={submissionCompleteHandler}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

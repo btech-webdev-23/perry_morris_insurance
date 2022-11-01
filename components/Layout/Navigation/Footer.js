@@ -18,7 +18,7 @@ const Footer = () => {
           >
             <FontAwesomeIcon
               icon={faEnvelopeOpen}
-              className="i-email"
+              className="icon"
               aria-hidden="true"
             />
             &nbsp; perry@perrymorrisinsurance.com
@@ -26,10 +26,10 @@ const Footer = () => {
           <a className={classes.phone} href="tel:+13608998760">
             <FontAwesomeIcon
               icon={faPhone}
-              className="i-phone"
+              className="icon"
               aria-hidden="true"
             />
-            &nbsp; (360)899-8760
+            &nbsp; (360) 899-8760
           </a>
         </div>
       </div>

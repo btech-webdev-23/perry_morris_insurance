@@ -59,7 +59,7 @@
     text-align: center;
     position: fixed;
     top: 0;
-    right: -300px;
+    right: -400px;
     width: 300px;
     height: 100vh;
     background: rgba(0, 0, 0, 0.8);
@@ -79,6 +79,6 @@
   }
 
   .nav li a:hover {
-    color: #cfa0fc;
+    color: #5f1a37;
   }
 }

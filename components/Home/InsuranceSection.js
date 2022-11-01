@@ -2,9 +2,9 @@ import Card from "../UI/Card";
 import pic from "../../img/coverage.jpg";
 import classes from "./InsuranceSection.module.css";
 
-const CoverageSection = (props) => {
+const InsuranceSection = (props) => {
   return (
-    <div className={classes.box} id="insurance">
+    <section className={classes.container} id="insurance">
       <p data-aos="fade-up">Get The Perfect Insurance For You</p>
       <h2 data-aos="fade-up" onClick={props.onShowModal}>
         The coverage we provide.
@@ -59,8 +59,8 @@ const CoverageSection = (props) => {
           </p>
         </Card>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default CoverageSection;
+export default InsuranceSection;

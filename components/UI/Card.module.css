@@ -1,6 +1,7 @@
 .card {
   /* display: absolute; */
-  width: 32%;
+  min-width: 340px;
+  max-width: 340px;
   min-height: 390px;
   max-height: 420px;
   box-sizing: border-box;
@@ -9,7 +10,7 @@
     0 4.4px 10px rgba(0, 0, 0, 0.015), 0 10.6px 24.1px rgba(0, 0, 0, 0.02),
     0 35px 80px rgba(0, 0, 0, 0.03);
   cursor: pointer;
-  margin: 0 10px;
+  margin: 10px;
   border-radius: 15px;
 }
 

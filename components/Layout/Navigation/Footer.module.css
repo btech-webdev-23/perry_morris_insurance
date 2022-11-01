@@ -14,11 +14,12 @@
 }
 
 .info p {
-  color: #5f1a37; /* Text */
+  color: #fff; /* Text */
 }
 
 .phone,
 .email {
+  margin: 0 0 0 25px;
   text-decoration: none;
   color: #fff;
 }
@@ -28,6 +29,11 @@
 .phone:hover,
 .phone:active {
   color: #5f1a37;
+}
+
+.i-email,
+.i-phone {
+  width: 15px;
 }
 
 .contact {

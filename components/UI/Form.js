@@ -23,6 +23,8 @@ const Form = (props) => {
     email: true,
     provider: true,
     message: true,
+    address: true,
+    dob: true,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
@@ -30,6 +32,8 @@ const Form = (props) => {
   const emailInputRef = useRef();
   const providerInputRef = useRef();
   const messageInputRef = useRef();
+  const addressInputRef = useRef();
+  const dobInputRef = useRef();
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
@@ -38,9 +42,14 @@ const Form = (props) => {
     const enteredEmail = emailInputRef.current.value;
     const enteredProvider = providerInputRef.current.value;
     const enteredMessage = messageInputRef.current.value;
+    const enteredAddress = addressInputRef.current.value;
+    const enteredDOB = dobInputRef.current.value;
 
     const enteredNameIsValid = !isEmpty(enteredName);
     const enteredProviderIsValid = !isEmpty(enteredProvider);
+    const enteredAddressIsValid = !isEmpty(enteredAddress);
+    //! This needs to updated specifically
+    const enteredDOBisValid = !isEmpty(enteredDOB);
     const enteredMessageIsValid = isTenChars(enteredMessage);
     const enteredEmailIsValid = validEmail(enteredEmail);
 
@@ -49,13 +58,17 @@ const Form = (props) => {
       email: enteredEmailIsValid,
       provider: enteredProviderIsValid,
       message: enteredMessageIsValid,
+      address: enteredAddressIsValid,
+      dob: enteredDOB,
     });
 
     const formIsValid =
       enteredNameIsValid &&
       enteredEmailIsValid &&
       enteredProviderIsValid &&
-      enteredMessageIsValid;
+      enteredMessageIsValid &&
+      enteredAddressIsValid &&
+      enteredDOBisValid;
 
     if (!formIsValid) {
       return;
@@ -66,6 +79,8 @@ const Form = (props) => {
       email: enteredEmail,
       provider: enteredProvider,
       message: enteredMessage,
+      address: enteredAddress,
+      dob: enteredDOB,
     };
 
     //! Right now isSubmitting and isComplete are staying false even after I try to set them
@@ -120,12 +135,35 @@ const Form = (props) => {
       {!formInputValid.email && (
         <p className={classes.errorMessage}>Please enter a valid email</p>
       )}
+      <label htmlFor="dob">Date of Birth</label>
+      <input
+        id="dob"
+        type="date"
+        name="dob"
+        ref={dobInputRef}
+        className={`${!formInputValid.dob ? classes.invalid : ""}`}
+      />
+      {!formInputValid.dob && (
+        <p className={classes.errorMessage}>Please enter a valid date</p>
+      )}
+      <label htmlFor="address">Resident Address</label>
+      <input
+        id="address"
+        type="text"
+        name="address"
+        placeholder="Current residential address"
+        ref={addressInputRef}
+        className={`${!formInputValid.address ? classes.invalid : ""}`}
+      />
+      {!formInputValid.address && (
+        <p className={classes.errorMessage}>Please enter a valid address</p>
+      )}
       <label htmlFor="provider">Who is your current provider?</label>
       <input
         id="provider"
         type="text"
         name="provider"
-        placeholder="current provider"
+        placeholder="Current provider"
         ref={providerInputRef}
         className={`${!formInputValid.provider ? classes.invalid : ""}`}
       />

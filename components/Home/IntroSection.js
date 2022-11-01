@@ -11,7 +11,7 @@ const IntroSection = () => {
 
   return (
     <section className={classes.container}>
-      <Image src={lighthouse} alt="Lighthouse" fill />
+      <Image src={lighthouse} alt="Lighthouse" fill priority />
       <div className={classes["section-content"]}>
         <p>Our number one priority is you!</p>
         <h2>

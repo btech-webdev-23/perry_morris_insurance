@@ -31,13 +31,12 @@
   border-radius: 20px 20px 0 0;
 }
 
-h3 {
+.header h3 {
   font-size: 1.5rem;
   color: #fff;
 }
 
 .header-icon {
-  font-size: 1.2rem;
   cursor: pointer;
 }
 
@@ -45,7 +44,7 @@ h3 {
   color: #5f1a37;
 }
 
-p {
+.container p {
   padding: 1rem;
   color: #5f1a37;
 }
