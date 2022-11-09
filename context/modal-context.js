@@ -1,10 +1,10 @@
 import { createContext, useState } from "react";
 
 const modalDescriptions = [
-  "Some sample text for individual coverage.",
-  "Some sample text for family coverage.",
-  "Some sample text for small business coverage.",
-  "Some sample text for retired coverage.",
+  "We make it simple to get individual plans to best suit your needs. Whether you're 26, getting insurance for the first time, or you have recently had a life changing event. We want to help.",
+  "Family is important to us. We can help you with finding the perfect coverage for the whole family to help give you peace of mind.",
+  "Make providing the best insurance as simple as possible. We cater to all businesses from 1 - 100 employees. We take care of your insurance so you can focus on your business.",
+  "We want to help! Your retirement is your time. Let us make insurance as simple and worry free as possible",
 ];
 
 const ModalContext = createContext({
